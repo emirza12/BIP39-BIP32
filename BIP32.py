@@ -98,19 +98,12 @@ def derive_child_key_with_level(master_private_key, chain_code, index, level):
 
 if __name__ == "__main__":
 
-    # Generate a random seed
     seed = generate_seed()  
-    # Generate master key and chain code
     master_private_key, chain_code = generate_master_key_and_chain(seed)  
-    # Generate master public key
     master_public_key = generate_master_public_key(master_private_key)  
-    # Derive child key without index
     child_private_key_no_index = derive_child_key_no_index(master_private_key, chain_code)
-    # Derive child key at index 0
     child_private_key_0 = derive_child_key(master_private_key, chain_code, 0)  
-    # Derive child key at index N (5)
     child_private_key_n = derive_child_key(master_private_key, chain_code, 5)  
-    # Derive child key at index N (5) and level M (2)
     child_private_key_nm = derive_child_key_with_level(master_private_key, chain_code, 5, 2)  
 
     print("Seed : ", seed.hex()) 

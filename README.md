@@ -1,4 +1,3 @@
-"""
 # 📜 BIP39 & BIP32 Key Derivation in Python
 
 Welcome to the **BIP39 & BIP32** repository! This project is designed to help you understand and implement key derivation processes used in blockchains like **Bitcoin** through Python code. The repository is divided into two parts:
